@@ -190,6 +190,13 @@ $(() => {
         }
     })
 
+    $('.uploadImage').on('change',(even)=> {
+        const file = even.target.files[0]
+        const fileReader = new FileReader()
+        fileReader.onloadend = ()=> { 
+            let data = []
+        }
+    })
     socket.on('load_stamp', (data) => {
         createChatImage(data, { width: STAMP_WIDTH})
     })
